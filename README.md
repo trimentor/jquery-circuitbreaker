@@ -11,7 +11,7 @@ var remoteFn = function () {
 };
 
 var circuitBreaker = new CircuitBreaker(remoteFn, {
-  failureTreshold: 3 // Default "5"
+  failureThreshold: 3 // Default "5"
 });
 
 circuitBreaker.fire().done(function () {

@@ -19,7 +19,7 @@ var CircuitBreaker = function (asyncFn, options) {
   this.failures = 0;
 
   this.options = $.extend({
-    failureTreshold: 5
+    failureThreshold: 5
   }, options);
 };
 
@@ -53,7 +53,7 @@ CircuitBreaker.prototype.getState = function () {
 };
 
 CircuitBreaker.prototype.getFailureThreshold = function () {
-  return this.options.failureTreshold;
+  return this.options.failureThreshold;
 };
 
 var CircuitBreakerError = function () {};
